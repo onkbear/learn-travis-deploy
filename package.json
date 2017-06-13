@@ -1,0 +1,13 @@
+{
+  "name": "learn-travis-deploy",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "node build/build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/onkbear/learn-travis-deploy.git"
+  },
+  "license": "MIT"
+}
