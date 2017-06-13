@@ -3,11 +3,15 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "build": "node build/build.js"
+    "build": "node build/build.js",
+    "test": "htmllint src/**/*.html"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/onkbear/learn-travis-deploy.git"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "htmllint-cli": "0.0.6"
+  }
 }
