@@ -1,8 +1,7 @@
 language: node_js
 node_js:
 - '8'
-- '6'
-before_deploy: 'npm build'
+before_deploy: 'npm run build'
 deploy:
   provider: s3
   access_key_id:
@@ -16,4 +15,5 @@ deploy:
   acl: public_read
   on:
     repo: onkbear/learn-travis-deploy
+    branch: master
   local_dir: dist
