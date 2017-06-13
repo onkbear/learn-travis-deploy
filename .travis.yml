@@ -2,6 +2,7 @@ language: node_js
 node_js:
 - '8'
 - '6'
+before_deploy: 'npm build'
 deploy:
   provider: s3
   access_key_id:
@@ -9,6 +10,9 @@ deploy:
   secret_access_key:
     secure: Ybu0XxbYQehpv0Nga/5s+eHrHjP5kuP77c4PTRBD7T4dj1KkBd0ktUNCtgWBLZHAIYIO/q6pL8ZmrPBLr5P54qgY5490Y0o6TenySMpy66oYMcH01Da/XGq4Uz6qtdUQwOYEXL1w+ZcqTFIyEv3xAV+mrumZX8RkqxeEQe7G7Zp3CnjGruKyNHb3bc9SgA3Wy6q4yzFqnvUcu0jUmrzM6KPvbkhuJgdWDuAiK4D/1fpc5X05JjzKL+fCxzX3L1+3E4puBE/EfPezOdsYWwLDlxKFIbc/RY2Bda5xxQuOMA+aP4Y4mInwHEaDR8LVkkdhBAhY5wuxrIqaiZzD2pOVws59M3lRg4/lVtvoHfUV9TI04LUpVy6TP1R6Bg+RAnHrIkYK7w1w7hIsCdIPj0vVd2Jrux++6h6mLUeKzVc/xdGLMV+UxvYBQ6/DqU8aRqvUVcTdRKmrQNrcWFLh65wcFRLOypd32hG9pdL2tlqqXAxk4VIRBon4EMAykjT8YBqLumUY9gk+McGF/rOnFZeas+L9IRSDOGUhsmRB6xeDdN4A7ClrSOtckVVRjL+Jbtaktax9MidpgHGmyNMIjytHOQC67xSlPw3Bkq7XrdI1eB7iqYrjW2oIoQTigG3K5w09Ldd8lanT+VfHKAjp2oyFwR8Eia13iwxrvJ+0oBMwFp0=
   bucket: learn-travis-deploy
+  skip_cleanup: true
+  region: us-east-1
+  endpoint: s3.amazonaws.com
   acl: public_read
   on:
     repo: onkbear/learn-travis-deploy
